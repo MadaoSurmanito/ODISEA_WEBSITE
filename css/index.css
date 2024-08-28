@@ -1,0 +1,53 @@
+#foto_index{
+    /* centrar la imagen */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* Hacer que ocupe el 100% del ancho */
+    
+    width: 100%;
+    
+}
+
+#Articulo1{
+    /* centrar la imagen */
+    display: flex;
+    margin-left: auto;
+    margin-top : 20px;
+    margin-right: auto;
+    /* Hacer que ocupe el 100% del ancho */
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+#Articulo1>img{
+    /* centrar la imagen */
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    /* Hacer que ocupe el 100% del ancho */
+    width: 20%;
+    transition: opacity 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+#Articulo1>img:hover{
+    /*Ampliar la imagen al pasar el ratón por encima*/
+    transform: scale(1.1);
+    
+}
+
+#Articulo1 div{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+}
+
+#Articulo1 div h2{
+    text-align: center;
+    color: white;
+    
+}

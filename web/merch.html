@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Metadatos del documento -->
+    <meta charset="UTF-8" />
+    <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ajuste de la escala para dispositivos móviles -->
+    <meta name="description" content="Formulario de Reserva del ensayo" />
+    <!-- Descripción del contenido -->
+    <meta
+      name="keywords"
+      content="Música, Ensayo, Grabación, Cádiz, Información, Reservar"
+    />
+    <!-- Palabras clave para SEO -->
+    <meta
+      name="author"
+      content="Alejandro Ramos Rodríguez, Alejandro Sanz Huerta"
+    />
+    <!-- Autor/es del documento -->
+    <meta name="robots" content="index, nofollow" />
+    <!-- Comportamiento de los robots de búsqueda -->
+    <link rel="icon" href="../ico/SimboloCMHtransp.ico" type="image/x-icon" />
+    <!-- Icono de la página -->
+    <title>Reserva</title>
+
+    <!-- Scripts -->
+    <script src="../js/form.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../estilos/comun.css" />
+    <link rel="stylesheet" href="../estilos/reserva.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Encabezado-->
+    <header>
+      <!-- Logo que redirige al index.html -->
+      <a href="index.html">
+        <img src="../img/LogoTransparente.png" alt="Logo" />
+      </a>
+      <!-- Navegación con enlaces -->
+      <nav>
+        <!-- Enlace a la página de reservas -->
+        <a href="reserva.html">Reservar</a>
+        <!-- Enlace a la página de salas -->
+        <a href="salas.html">Espacios</a>
+        <!-- Enlace a la página "Conócenos" -->
+        <a href="conocenos.html">Conócenos</a>
+      </nav>
+    </header>
+    <main>
+      <!-- Contenido principal de la página -->
+      <div class="bloqueAmarillo">
+        <!-- Logo del Cádiz Music Hub -->
+        <img
+          src="../img/SimboloCMHtransp.png"
+          alt="Cádiz Music Hub"
+          width="50"
+          height="50"
+        />
+        <div>
+          <!-- Título principal -->
+          <h1>Reserva Espacio Musical</h1>
+          <!-- Formulario de reserva -->
+          <form action="#" method="post" id="formulario">
+            <!-- Sección de datos personales -->
+            <h2>Datos Personales</h2>
+            <div class="bloqueFormulario">
+              <div>
+                <div>
+                  <!-- Campo para el nombre -->
+                  <label for="nombre">Nombre*</label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    placeholder="Escribe tu nombre..."
+                  />
+                </div>
+                <div>
+                  <!-- Campo para los apellidos -->
+                  <label for="apellidos">Apellidos*</label>
+                  <input
+                    type="text"
+                    name="apellidos"
+                    id="apellidos"
+                    placeholder="Indica tus apellidos..."
+                  />
+                </div>
+              </div>
+              <!-- Campo para la fecha de nacimiento -->
+              <div>
+                <div>
+                  <label for="fechaNac">Fecha de Nacimiento</label>
+                  <input type="date" name="fechaNac" id="fechaNac" />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <!-- Campo para el correo electrónico -->
+                  <label for="email">Correo electrónico*</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="ejemplo@ejemplo.com"
+                  />
+                </div>
+                <div>
+                  <!-- Campo para el teléfono -->
+                  <label for="telefono">Teléfono*</label>
+                  <input type="tel" name="telefono" id="telefono" placeholder="Introduzca su teléfono..."/>
+                </div>
+              </div>
+            </div>
+            <!-- Sección para seleccionar el tipo de espacio a reservar -->
+            <h2>¿Qué espacio desea reservar?</h2>
+            <div class="bloqueFormulario">
+              <select name="tipoEs" id="tipoEs">
+                <option value="0">Seleccione uno...</option>
+                <option value="1">Sala de Ensayo</option>
+                <option value="2">Estudio de Grabación</option>
+              </select>
+            </div>
+            <!-- Sección para los detalles de la reserva de la Sala de Ensayo -->
+            <h2 class="SalaEnsayo" style="display: none;">Datos Sala</h2>
+            <div class="SalaEnsayo bloqueFormulario" style="display: none;">
+              <div>
+                <div>
+                  <!-- Campo para el número de participantes -->
+                  <label for="participantesSal">Nº de participantes*</label>
+                  <input
+                    type="number"
+                    name="participantesSal"
+                    id="participantesSal"
+                  />
+                </div>
+                <div>
+                  <!-- Campo para la fecha de reserva -->
+                  <label for="fechaReservaSal">Fecha de reserva*</label>
+                  <input
+                    type="date"
+                    name="fechaReservaSal"
+                    id="fechaReservaSal"
+                  />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <!-- Campo para seleccionar la sala -->
+                  <label for="sala">Sala a reservar*</label>
+                  <select name="sala" id="sala">
+                    <option value="0">Seleccione una sala...</option>
+                    <option value="1">Sala 1</option>
+                    <option value="2">Sala 2</option>
+                    <option value="3">Sala 3</option>
+                  </select>
+                  <!-- Información sobre el coste de la sala -->
+                  <p id="CosteSala" class="SubPrecio">Coste de esta sala: 0 €/h</p>
+                </div>
+                <div>
+                  <!-- Tabla para mostrar los tramos horarios disponibles -->
+                  <table class="TablaHorarios">
+                    <thead>
+                      <tr>
+                        <th>Tramo horario*</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Botones para cada tramo horario -->
+                      <tr>
+                        <td><button type="button" value="10">10:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="11">11:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="12">12:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="13">13:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="14">14:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="15">15:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="16">16:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="17">17:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="18">18:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="19">19:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="20">20:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="21">21:00</button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" value="22">22:00</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- Coste total de la reserva -->
+              <p id="CosteTotalSala">Coste total: 0 €</p>
+              <!-- Sección para los datos artísticos -->
+            </div>
+            <h2 class="SalaEnsayo" style="display: none;">Datos Artísticos</h2>
+            <div class="SalaEnsayo bloqueFormulario" style="display: none;">
+              <div>
+                <div>
+                  <!-- Campo para el nombre artístico -->
+                  <label for="nombreArtistico">Nombre artista/banda</label>
+                  <input
+                    type="text"
+                    name="nombreArtistico"
+                    id="nombreArtistico"
+                  />
+                </div>
+                <div>
+                  <!-- Campo para el género musical -->
+                  <label for="genero">Género musical</label>
+                  <input type="text" name="genero" id="genero" />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <!-- Campo para la cuenta de Instagram -->
+                  <label for="instagram">Cuenta de instagram</label>
+                  <input type="text" name="instagram" id="instagram" />
+                </div>
+                <div>
+                  <!-- Campo para el perfil de Spotify -->
+                  <label for="spotify">Perfil de Spotify</label>
+                  <input type="text" name="spotify" id="spotify" />
+                </div>
+              </div>
+            </div>
+            <!-- Sección para los datos de reserva de Estudio de Grabación -->
+            <h2 class="Grabacion" style="display: none;">Datos Estudio</h2>
+            <div class="bloqueFormulario Grabacion" style="display: none;">
+              <div>
+                <div>
+                  <!-- Campo para el número de participantes -->
+                  <label for="participantesEs">Nº de participantes*</label>
+                  <input
+                    type="number"
+                    name="participantesEs"
+                    id="participantesEs"
+                  />
+                </div>
+                <div>
+                  <!-- Campo para la fecha de reserva -->
+                  <label for="fechaReservaEs">Fecha de reserva*</label>
+                  <input
+                    type="date"
+                    name="fechaReservaEs"
+                    id="fechaReservaEs"
+                  />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <!-- Campo para seleccionar el estudio -->
+                  <label for="estudio">Estudio a reservar*</label>
+                  <select name="estudio" id="estudio">
+                    <option value="0">Seleccione una estudio...</option>
+                    <option value="1">Estudio 1</option>
+                    <option value="2">Estudio 2</option>
+                    <option value="3">Estudio 3</option>
+                  </select>
+
+                  <!-- Información sobre el coste del estudio -->
+                  <p id="CosteEstudio" class="SubPrecio">Coste de este estudio: Lorem €/h</p>
+                  <div>
+                    <!-- Checkbox para indicar si se necesita técnico de sonido -->
+                    <label for="tecnico">¿Necesitas técnico de sonido?</label>
+                    <input type="checkbox" name="tecnico" id="tecnico" />
+                  </div>
+                  <!-- Información sobre el técnico de sonido -->
+                  <p>
+                    Es obligatorio tener un técnico para usar nuestros estudios.
+                    Proporcionaremos uno en caso de que no lleves un propio.
+                    Coste del técnico: 20 €/h
+                  </p>
+                </div>
+                <!-- Tabla para mostrar los tramos horarios disponibles -->
+                <table class="TablaHorarios">
+                  <thead>
+                    <tr>
+                      <th>Tramo horario*</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Botones para cada tramo horario -->
+                    <tr>
+                      <td><button type="button" value="10">10:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="11">11:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="12">12:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="13">13:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="14">14:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="15">15:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="16">16:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="17">17:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="18">18:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="19">19:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="20">20:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="21">21:00</button></td>
+                    </tr>
+                    <tr>
+                      <td><button type="button" value="22">22:00</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- Coste total de la reserva -->
+              </div>
+              <p id="CosteTotalEstudio">Coste total: 0 €</p>
+            </div>
+
+            <!-- Nota sobre campos obligatorios -->
+            <p id="problemas">
+              *
+              <i>Este campo es obligatorio</i>
+            </p>
+            <!-- Botón para enviar el formulario -->
+            <input type="hidden" name="precioTotal" id="precioTotal" value="0">
+            <input type="submit" value="Enviar formulario" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <!-- Pie de página con enlaces de navegación, información de contacto y enlaces a redes sociales -->
+    <footer>
+      <!-- Primer bloque de enlaces de navegación en el pie de página -->
+      <div>
+        <a href="index.html">Inicio</a>
+        <!-- Enlace a la página de reservas -->
+        <a href="reserva.html">Reservar</a>
+        <!-- Enlace a la página de salas -->
+        <a href="salas.html">Espacios</a>
+        <!-- Enlace a la página "Conócenos" -->
+        <a href="conocenos.html">Conócenos</a>
+      </div>
+      <img class="spacerFooter" src="../ico/SpacerFooter.png" alt="spacer" />
+      <!-- Segundo bloque con información de contacto -->
+      <div id="informacionF">
+        <!-- Dirección con ícono -->
+        <p>
+          <img
+            src="../ico/marcador.png"
+            alt="Dirección"
+            width="30"
+            height="30"
+          />
+          Av. Universidad de Cádiz,
+          <br />
+          10, 11519 Puerto Real, Cádiz
+        </p>
+        <!-- Teléfono con ícono -->
+        <p>
+          <img
+            src="../ico/voltear-el-telefono.png"
+            alt="Teléfono"
+            width="30"
+            height="30"
+          />
+          956 48 32 00
+        </p>
+      </div>
+      <img class="spacerFooter" src="../ico/SpacerFooter.png" alt="spacer" />
+      <!-- Tercer bloque con enlaces a redes sociales -->
+      <div>
+        <!-- Enlace a Twitter -->
+        <a href="">
+          <img src="../ico/twitter-alt.png" alt="X" width="30" height="30" />
+        </a>
+        <!-- Enlace a Instagram -->
+        <a href="https://www.instagram.com/cadiz_music_hub/">
+          <img
+            src="../ico/instagram.png"
+            alt="Instagram"
+            width="30"
+            height="30"
+          />
+        </a>
+
+        <!-- Enlace a Spotify -->
+        <a
+          class="iconoFooter"
+          href="https://open.spotify.com/playlist/3CbyfgkyTiAAv9qq7VA1E2?si=3bef6c214df94572"
+        >
+          <img src="../ico/spotify.png" alt="Spotify" />
+        </a>
+
+        <!-- Enlace a Facebook -->
+        <a class="iconoFooter" href="">
+          <img src="../ico/facebook.png" alt="Facebook" />
+        </a>
+      </div>
+      <img class="spacerFooter" src="../ico/SpacerFooter.png" alt="spacer" />
+      <!-- Cuarto bloque con enlace a la sección de créditos -->
+      <div>
+        <!-- Enlace a la sección "Créditos" dentro de la página "Conócenos" -->
+        <a href="conocenos.html#creditos">Créditos</a>
+      </div>
+    </footer>
+  </body>
+</html>
