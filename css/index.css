@@ -3,6 +3,7 @@
 	display: flex;
 	margin-left: auto;
 	margin-top: 50px;
+    margin-bottom: 50px;
 	margin-right: auto;
 	/* Hacer que ocupe el 100% del ancho */
 	flex-direction: row;
