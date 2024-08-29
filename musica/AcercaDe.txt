@@ -1,0 +1,5 @@
+Los enlaces en el JSON de canciones estan ordenados de la siguiente forma:
+    1º -> Spotify
+    2º -> Youtube
+    3º -> Apple
+    4º -> Amazon

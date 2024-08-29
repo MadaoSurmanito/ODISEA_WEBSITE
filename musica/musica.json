@@ -1,0 +1,43 @@
+{
+    "Canciones":[
+        {
+            "Portada": "",
+            "Titulo":"Cancion 1",
+            "Descripcion": "caca 2",
+            "Fecha": "2020-01-01",
+            "Autor":"Artista 1",
+            "Enlaces": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "Portada": "",
+            "Titulo":"Cancion 1",
+            "Descripcion": "caca 2",
+            "Fecha": "2020-01-01",
+            "Autor":"Artista 1",
+            "Enlaces": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "Portada": "",
+            "Titulo":"Cancion fea",
+            "Descripcion": "caca 2",
+            "Fecha": "2020-01-01",
+            "Autor":"Artista 1",
+            "Enlaces": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        }
+    ]
+}
