@@ -7,7 +7,7 @@ body {
         to bottom,
         #d40000, /* Rojo */
         #d40000 80px, /* Rojo a la mitad de la ventana */
-        black 50vh, /* Rojo a la mitad de la altura de la ventana */
+        black 80vh, /* Rojo a la mitad de la altura de la ventana */
         #d40000 100vh /* Negro completo al final de la ventana */
     );
 	color: white; /* Cambia el color del texto para que sea visible sobre el fondo oscuro */
@@ -55,7 +55,6 @@ header nav a:hover,  header nav a img:hover{
 h2 {
 	color: #d40000;
 	font-size: 2em;
-	margin-bottom: 20px;
 }
 
 p {
