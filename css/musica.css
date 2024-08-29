@@ -1,0 +1,26 @@
+.portada
+{
+    /* centrar la imagen */
+	display: block;
+	margin-left: 20%;
+	margin-right: auto;
+	/* Poner una sombra al rededor de la imagen */
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	/* Hacer que ocupe el 100% del ancho */
+	width: 20%;
+	transition: opacity 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+article {
+	/* centrar la imagen */
+	display: flex;
+	margin-left: auto;
+	margin-top: 50px;
+    margin-bottom: 50px;
+	margin-right: auto;
+	/* Hacer que ocupe el 100% del ancho */
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	justify-content: center;
+}

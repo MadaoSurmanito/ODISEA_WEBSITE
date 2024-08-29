@@ -2,6 +2,7 @@ body {
 	margin: 0; /* Elimina los márgenes predeterminados del body */
     display: flex;
     flex-direction: column;
+	padding-top: 70px;
 	background: repeating-linear-gradient(
         to bottom,
         #d40000, /* Rojo */
@@ -134,4 +135,23 @@ html::-webkit-scrollbar {
 
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari, y Opera */
+}
+
+.IconosCanciones {
+	display: flex;
+	justify-content: center; /* Centra los íconos horizontalmente */
+	gap: 30px; /* Espacio entre los íconos */
+	margin-top: 10px; /* Espacio adicional entre el H2 y los íconos */
+}
+
+.IconosCanciones a img {
+	/* Reducir el tamaño de las imágenes */
+	width: 3em;
+    height: 3em;
+	transition: opacity 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.IconosCanciones a img:hover {
+	/* Aumentar el tamaño de los íconos al pasar el ratón por encima */
+	transform: scale(1.1);
 }

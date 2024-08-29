@@ -51,22 +51,3 @@
 	/* Hacer que ocupe el 100% del ancho */
 	width: 100%;
 }
-
-#FWDIconos {
-	display: flex;
-	justify-content: center; /* Centra los íconos horizontalmente */
-	gap: 30px; /* Espacio entre los íconos */
-	margin-top: 10px; /* Espacio adicional entre el H2 y los íconos */
-}
-
-#FWDIconos a img {
-	/* Reducir el tamaño de las imágenes */
-	width: 3em;
-    height: 3em;
-	transition: opacity 0.3s, transform 0.3s; /* Transiciones suaves */
-}
-
-#FWDIconos a img:hover {
-	/* Aumentar el tamaño de los íconos al pasar el ratón por encima */
-	transform: scale(1.1);
-}

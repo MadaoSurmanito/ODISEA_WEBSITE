@@ -1,56 +1,69 @@
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('../musica/musica.json')
-        .then(response => response.json())
-        .then(data => {
-            let seccionPadre = document.getElementById('musica');
-            for(let i = 0; i < data.Canciones.length; i++) {
-                //Cuadradito donde va
-                let articulo = document.createElement('article');
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('../musica/musica.json')
+    .then((response) => response.json())
+    .then((data) => {
+      let seccionPadre = document.getElementById('musica')
+      for (let i = 0; i < data.Canciones.length; i++) {
+        //Cuadradito donde va
+        let articulo = document.createElement('article')
 
-                //Info de la cancion
-                let titulo = document.createElement('h2');
-                let descripcion = document.createElement('p');
-                let fecha = document.createElement('p');
-                let autor = document.createElement('p');
-                let portada = document.createElement('img');
-                let enlaces = ["Spotify", "YouTube", "Apple", "Amazon"];
+        //Info de la cancion
+        let portada = document.createElement('img')
 
-                //Titulo
-                titulo.innerHTML = data.Canciones[i].Titulo;
+        let divisor = document.createElement('div')
+        let divisorEnlaces = document.createElement('div')
+        // Todo esto va dento del div
+        let titulo = document.createElement('h2')
+        let descripcion = document.createElement('p')
+        let fecha = document.createElement('p')
+        let autor = document.createElement('p')
+        let enlaces = ['Spotify', 'YouTube', 'Apple', 'Amazon']
 
-                articulo.appendChild(titulo);
+        //Portada
+        portada.src = data.Canciones[i].Portada
+        portada.alt = data.Canciones[i].Titulo
+        portada.classList.add('portada')
+        articulo.appendChild(portada)
 
-                //Descripcion
-                descripcion.innerHTML = data.Canciones[i].Descripcion;
+        //Divisor
+        articulo.appendChild(divisor)
 
-                articulo.appendChild(descripcion);
+        //Titulo
+        titulo.innerHTML = data.Canciones[i].Titulo
 
-                //Fecha
-                fecha.innerHTML = data.Canciones[i].Fecha;
+        divisor.appendChild(titulo)
 
-                articulo.appendChild(fecha);
+        //Descripcion
+        descripcion.innerHTML = data.Canciones[i].Descripcion
 
-                //Autor
-                autor.innerHTML = data.Canciones[i].Autor;
+        divisor.appendChild(descripcion)
 
-                articulo.appendChild(autor);
+        //Fecha
+        fecha.innerHTML = data.Canciones[i].Fecha
 
-                //Portada
-                portada.src = data.Canciones[i].Portada;
-                portada.alt = data.Canciones[i].Titulo;
+        divisor.appendChild(fecha)
 
-                articulo.appendChild(portada);
+        //Autor
+        autor.innerHTML = data.Canciones[i].Autor
 
-                //Enlaces
-                for(let j = 0; j < data.Canciones[i].Enlaces.length; j++) {
-                    let enlace = document.createElement('a');
-                    enlace.href = data.Canciones[i].Enlaces[j];
-                    enlace.innerHTML = enlaces[j];
+        divisor.appendChild(autor)
 
-                    articulo.appendChild(enlace);
-                }
+        //DivisorEnlaces
+        divisor.appendChild(divisorEnlaces)
+        divisorEnlaces.classList.add('IconosCanciones')
+        //Enlaces
+        for (let j = 0; j < data.Canciones[i].Enlaces.length; j++) {
+          let enlace = document.createElement('a')
+          enlace.href = data.Canciones[i].Enlaces[j]
+          let img = document.createElement('img')
+          img.src = '../ico/' + enlaces[j] + '.png'
+          img.alt = enlaces[j]
+          enlace.appendChild(img)
 
-                seccionPadre.appendChild(articulo);
-            };
-        });
-});
+          divisorEnlaces.appendChild(enlace)
+        }
+
+        seccionPadre.appendChild(articulo)
+      }
+    })
+})
