@@ -4,19 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     .then((data) => {
       let seccionPadre = document.getElementById('musica')
 
-      console.log(data)
-
       //Ordenar el array de canciones por fecha de publicación
       data.Musica.sort((a, b) => {
-        console.log(a.Fecha)
-        console.log(b.Fecha)
-        console.log(new Date(b.Fecha))
-        console.log(new Date(a.Fecha))
-        console.log(new Date(b.Fecha) - new Date(a.Fecha))
         return new Date(b.Fecha) - new Date(a.Fecha)
       })
-
-      console.log(data)
 
       for (let i = 0; i < data.Musica.length; i++) {
         // Crear el artículo
