@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding-top: 70px;
+    background: black;
+    color: white;
+    font-family: "Alatsi", sans-serif;
+  }
+  
+  /* Estilos para los títulos principales */
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+  }
+  
+  /* Estilo para la lista de álbumes */
+  #albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .album {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px;
+    width: 250px; /* Tamaño fijo para las tarjetas de álbum */
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .album:hover {
+    transform: scale(1.05);
+  }
+  
+  .album a {
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+  
+  .album img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #444;
+  }
+  
+  .album h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+  }
+  

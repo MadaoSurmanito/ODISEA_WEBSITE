@@ -2,49 +2,35 @@
   "Musica": [
     {
       "Tipo": "Album",
-      "Portada": "../img/Portadas/PORTADASINGLEFIGHTWARANDDREAMSv2.jpg",
-      "Titulo": "ODISEA VOL.1",
-      "Descripcion": "Nuestra primera maqueta con la formación anterior",
-      "Fecha": "2023-12-07",
-      "Enlaces": [
-        "https://open.spotify.com/intl-es/track/5rwxaxl13i72uVBexoOqAd?si=41f46c1d1fbe4bb4",
-        "https://www.youtube.com/watch?v=lgNqXdiRuRU",
-        "https://music.apple.com/es/album/fight-war-and-dreams-ntwe-single/1719858742",
-        "https://www.amazon.de/music/player/albums/B0CPJBSCJZ"
-      ],
+      "Portada": "../img/Portadas/ODISEA-VOL1.png",
+      "Titulo": "ODISEA VOL. 1",
+      "Descripcion": "Nuestra primera maqueta con la formación primigénea de la banda",
+      "Fecha": "2023-06-09",
+      "Enlaces": [],
       "Canciones": [
         {
-          "Titulo": "Cancion 1",
-          "Descripcion": "Cancion 1",
-          "Autor": "Música: Alejandro Sanz Huerta, Letras: Lucía Palma Gragera",
-          "Enlaces": [
-            "https://open.spotify.com/intl-es/track/5rwxaxl13i72uVBexoOqAd?si=41f46c1d1fbe4bb4",
-            "https://www.youtube.com/watch?v=lgNqXdiRuRU",
-            "https://music.apple.com/es/album/fight-war-and-dreams-ntwe-single/1719858742",
-            "https://www.amazon.de/music/player/albums/B0CPJBSCJZ"
-          ]
+          "Titulo": "Nuestra",
+          "Descripcion": "Intoducción a nuestra maqueta con la que abriamos los conciertos",
+          "Autor": "Música: Alejandro, Letras: Espe",
+          "Enlaces": []
         },
         {
-          "Titulo": "Cancion 2",
-          "Descripcion": "Cancion 2",
-          "Autor": "Música: Alejandro Sanz Huerta, Letras: Lucía Palma Gragera",
-          "Enlaces": [
-            "https://open.spotify.com/intl-es/track/5rwxaxl13i72uVBexoOqAd?si=41f46c1d1fbe4bb4",
-            "https://www.youtube.com/watch?v=lgNqXdiRuRU",
-            "https://music.apple.com/es/album/fight-war-and-dreams-ntwe-single/1719858742",
-            "https://www.amazon.de/music/player/albums/B0CPJBSCJZ"
-          ]
+          "Titulo": "Venganza",
+          "Descripcion": "Descripcion de venganza",
+          "Autor": "Música: Alejandro, Letras: Espe",
+          "Enlaces": []
         },
         {
-          "Titulo": "Cancion 3",
-          "Descripcion": "Cancion 3",
-          "Autor": "Música: Alejandro Sanz Huerta, Letras: Lucía Palma Gragera",
-          "Enlaces": [
-            "https://open.spotify.com/intl-es/track/5rwxaxl13i72uVBexoOqAd?si=41f46c1d1fbe4bb4",
-            "https://www.youtube.com/watch?v=lgNqXdiRuRU",
-            "https://music.apple.com/es/album/fight-war-and-dreams-ntwe-single/1719858742",
-            "https://www.amazon.de/music/player/albums/B0CPJBSCJZ"
-          ]
+          "Titulo": "Ahora soy yo",
+          "Descripcion": "Descripcion de Ahora soy yo",
+          "Autor": "Música: Alejandro, Letras: Espe",
+          "Enlaces": []
+        },
+        {
+          "Titulo": "Fantasma",
+          "Descripcion": "Descripcion de fantasma",
+          "Autor": "Música: Alejandro, Letras: Espe",
+          "Enlaces": []
         }
       ]
     },

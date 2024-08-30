@@ -1,0 +1,12 @@
+{
+  "Galeria": [
+    {
+      "Titulo": "Marinaleda",
+      "Directorio": "../galery/Marinaleda/"
+    },
+    {
+      "Titulo": "Primer Concierto",
+      "Directorio": "../galery/PrimerConcierto/"
+    }
+  ]
+}
