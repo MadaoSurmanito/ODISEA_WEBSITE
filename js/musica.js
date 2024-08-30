@@ -4,7 +4,21 @@ document.addEventListener('DOMContentLoaded', function () {
     .then((data) => {
       let seccionPadre = document.getElementById('musica')
 
-      for (let i = 0; i < data.Canciones.length; i++) {
+      console.log(data)
+
+      //Ordenar el array de canciones por fecha de publicación
+      data.Musica.sort((a, b) => {
+        console.log(a.Fecha)
+        console.log(b.Fecha)
+        console.log(new Date(b.Fecha))
+        console.log(new Date(a.Fecha))
+        console.log(new Date(b.Fecha) - new Date(a.Fecha))
+        return new Date(b.Fecha) - new Date(a.Fecha)
+      })
+
+      console.log(data)
+
+      for (let i = 0; i < data.Musica.length; i++) {
         // Crear el artículo
         let articulo = document.createElement('article')
 
@@ -19,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
         let enlaces = ['Spotify', 'Youtube', 'Apple', 'Amazon']
 
         // Configuración de la portada
-        portada.src = data.Canciones[i].Portada
-        portada.alt = data.Canciones[i].Titulo
+        portada.src = data.Musica[i].Portada
+        portada.alt = data.Musica[i].Titulo
         portada.classList.add('portada')
         articulo.appendChild(portada)
 
@@ -29,27 +43,28 @@ document.addEventListener('DOMContentLoaded', function () {
         divisor.classList.add('infoCancion')
 
         // Configuración del título
-        titulo.innerHTML = data.Canciones[i].Titulo
+        titulo.innerHTML = data.Musica[i].Titulo
         divisor.appendChild(titulo)
 
         // Configuración de la descripción
-        descripcion.innerHTML = data.Canciones[i].Descripcion
+        descripcion.innerHTML = data.Musica[i].Descripcion
         divisor.appendChild(descripcion)
 
         // Configuración de la fecha
-        fecha.innerHTML = 'Fecha de publicación: ' + data.Canciones[i].Fecha
+        let fechaPublicacion = new Date(data.Musica[i].Fecha)
+        fecha.innerHTML = 'Fecha de publicación: ' + fechaPublicacion.getDate() + '/' + (fechaPublicacion.getMonth() + 1) + '/' + fechaPublicacion.getFullYear()
         divisor.appendChild(fecha)
 
         // Configuración del autor
-        autor.innerHTML = data.Canciones[i].Autor
+        autor.innerHTML = data.Musica[i].Autor
         divisor.appendChild(autor)
 
         // Configuración de los enlaces
         divisor.appendChild(divisorEnlaces)
-        divisorEnlaces.classList.add('IconosCanciones')
-        for (let j = 0; j < data.Canciones[i].Enlaces.length; j++) {
+        divisorEnlaces.classList.add('IconosMusica')
+        for (let j = 0; j < data.Musica[i].Enlaces.length; j++) {
           let enlace = document.createElement('a')
-          enlace.href = data.Canciones[i].Enlaces[j]
+          enlace.href = data.Musica[i].Enlaces[j]
           let img = document.createElement('img')
           img.src = '../ico/' + enlaces[j] + '.png'
           img.alt = enlaces[j]
