@@ -1,0 +1,12 @@
+{
+  "Conciertos": [
+    {
+      "Cartel": "../img/Carteles/Cartel_Brocoli.png",
+      "Titulo": "Brocoli Open Season",
+      "Ubicación": "Centro Cívico El Cerrillo",
+      "Localidad": "Chiclana de la Frontera",
+      "Fecha": "26-07-2024",
+      "Bandas": ["Con Burnedwaves por lo que sea no"]
+    }
+  ]
+}

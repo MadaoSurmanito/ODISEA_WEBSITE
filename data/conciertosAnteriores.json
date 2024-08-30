@@ -1,0 +1,67 @@
+{
+  "Conciertos": [
+    {
+      "Cartel": "../img/Carteles/Cartel_Marinaleda.png",
+      "Titulo": "Encuentro de Bandas",
+      "Ubicación": "Sala PALO PALO",
+      "Localidad": "Marinaleda",
+      "Fecha": "04-05-2023",
+      "Bandas": ["Sonoris Causa", "Demencia Genil"]
+    },
+    {
+      "Cartel": "../img/Carteles/Cartel_PinkParty.png",
+      "Titulo": "Pink Party",
+      "Ubicación": "Totaku Music Club",
+      "Localidad": "Dos Hermanas",
+      "Fecha": "02-02-2024",
+      "Bandas": ["Vietnam Side"]
+    },
+    {
+      "Cartel": "../img/Carteles/Cartel_Purethrash.jpeg",
+      "Titulo": "PURETHRASH METAL Coast Edition",
+      "Ubicación": "Country RD, Valdelagrana",
+      "Localidad": "El Puerto de Santa María",
+      "Fecha": "09-12-2023",
+      "Bandas": ["Vietnam Side", "Feral"]
+    },
+    {
+      "Cartel": "../img/Carteles/Cartel_Halloween.png",
+      "Titulo": "ODISEA Halloween Party",
+      "Ubicación": "Sala BKL, La Báskula",
+      "Localidad": "Cádiz",
+      "Fecha": "28-10-2023",
+      "Bandas": ["Cables Cruzados", "Smoked Gallant"]
+    },
+    {
+      "Cartel": "../img/Carteles/Cartel_LaYerbabuena.jpg",
+      "Titulo": "Expo Otoñal'23 (Acústico)",
+      "Ubicación": "La Yerbabuena centro social",
+      "Localidad": "Jerez de la Frontera",
+      "Fecha": "23-09-2023"
+    },
+    {
+      "Cartel": "../img/Carteles/Cartel_DeCadiFest.jpeg",
+      "Titulo": "DeCadiFest primera edición",
+      "Ubicación": "Asociación La Catedral Del Arte",
+      "Localidad": "Cádiz",
+      "Fecha": "08-07-2023",
+      "Bandas": ["Ciberperros", "AMA"]
+    },
+    {
+      "Cartel": "../img/Carteles/Cartel_Baskula.jpg",
+      "Titulo": "Sala BKL",
+      "Ubicación": "Sala BKL, La Báskula",
+      "Localidad": "Cádiz",
+      "Fecha": "12-05-2023",
+      "Bandas": ["Cables Cruzados", "Los del Fondo"]
+    },
+    {
+      "Cartel": "../img/Carteles/Cartel_AmorDeDios.jpeg",
+      "Titulo": "Nuestro estreno",
+      "Ubicación": "Colegio Amor de Dios",
+      "Localidad": "Cádiz",
+      "Fecha": "03-03-2023",
+      "Bandas": ["Black Moss", "Vicious"]
+    }
+  ]
+}

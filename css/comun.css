@@ -7,7 +7,7 @@ body {
         to bottom,
         #d40000, /* Rojo */
         #d40000 80px, /* Rojo a la mitad de la ventana */
-        black 80vh, /* Rojo a la mitad de la altura de la ventana */
+        black 50vh, /* Rojo a la mitad de la altura de la ventana */
         #d40000 100vh /* Negro completo al final de la ventana */
     );
 	color: white;

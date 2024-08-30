@@ -1,0 +1,49 @@
+
+/* Estilo para los artículos */
+article {
+	background-color: #333;
+	border-radius: 10px;
+	padding: 20px;
+	margin-top: 50px;
+    margin-bottom: 50px;
+	margin-right: 10%;
+    margin-left: 10%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+article h2 {
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
+article p {
+	font-size: 1.2em;
+	line-height: 1.6;
+}
+
+/* Estilos para los enlaces de contacto */
+h3 {
+	font-size: 1.8em;
+	margin-top: 20px;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Estilo para el botón de descarga */
+button {
+	background-color: #d40000;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 1.2em;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+	background-color: #9e0000;
+  }

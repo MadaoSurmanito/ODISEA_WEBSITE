@@ -1,0 +1,43 @@
+{
+    "Canciones":[
+        {
+            "Portada": "../img/Portadas/PORTADASINGLEFIGHTWARANDDREAMSv2.jpg",
+            "Titulo":"Fight, War & Dreams (NTWE)",
+            "Descripcion": "Nuestro primer single en colaboración con la asociación de wrestling gaditana NTWE",
+            "Fecha": "07-12-2023",
+            "Autor":"Música: Alejandro Sanz Huerta, Letras: Lucía Palma Gragera",
+            "Enlaces": [
+                "https://open.spotify.com/intl-es/track/5rwxaxl13i72uVBexoOqAd?si=41f46c1d1fbe4bb4",
+                "https://www.youtube.com/watch?v=lgNqXdiRuRU",
+                "https://music.apple.com/es/album/fight-war-and-dreams-ntwe-single/1719858742",
+                "https://www.amazon.de/music/player/albums/B0CPJBSCJZ"
+            ]
+        },
+        {
+            "Portada": "../img/Portadas/PortadaDePrueba.jpg",
+            "Titulo":"Cancion De mierda 1",
+            "Descripcion": "Cancion de prueba para ver si funciona",
+            "Fecha": "29-02-1923",
+            "Autor":"Peshugah",
+            "Enlaces": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "Portada": "../img/Portadas/PORTADASINGLEFIGHTWARANDDREAMSv2.jpg",
+            "Titulo":"Fight, War & Dreams (NTWE)",
+            "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non turpis at magna pretium ornare vel a ex. Vivamus tincidunt ullamcorper nisl at varius. Nam ultrices accumsan odio, at posuere eros sollicitudin sit amet. Maecenas tempus, nulla quis bibendum scelerisque, tortor mi elementum enim, id tempor metus neque et est. Proin gravida nisl in eros sagittis suscipit. Nunc blandit, sem non tempor condimentum, nisl sapien consequat mauris, nec porta arcu erat eu felis. Curabitur metus justo, feugiat a purus sed, mollis congue magna. Donec pellentesque lectus vitae elit dictum, quis suscipit felis feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquam tellus in lectus bibendum, id rutrum purus dapibus. Nullam in velit vel nunc euismod pharetra. Phasellus ac lacinia nibh. Fusce sit amet nibh odio. Ut eget diam vehicula, aliquam metus non, fringilla dui. Aenean vitae sapien porta, efficitur massa ornare, vestibulum risus. Pellentesque cursus rhoncus lectus quis convallis. Duis molestie sit amet lectus a gravida. Cras justo mauris, scelerisque et ipsum tempor, aliquam gravida quam. Donec neque urna, vulputate semper placerat et, tincidunt at odio. Morbi et arcu id massa dapibus fermentum. Aenean suscipit aliquet nulla ac convallis. Etiam vestibulum iaculis est, eget vestibulum felis fringilla a. Nunc semper dapibus augue quis mollis. Pellentesque pulvinar urna quis quam finibus, egestas rhoncus ex consequat. Morbi sit amet dolor orci. Nullam vitae ex ultricies felis laoreet gravida id a leo.",
+            "Fecha": "07-12-2023",
+            "Autor":"Música: Alejandro Sanz Huerta, Letras: Lucía Palma Gragera",
+            "Enlaces": [
+                "https://open.spotify.com/intl-es/track/5rwxaxl13i72uVBexoOqAd?si=41f46c1d1fbe4bb4",
+                "https://www.youtube.com/watch?v=lgNqXdiRuRU",
+                "https://music.apple.com/es/album/fight-war-and-dreams-ntwe-single/1719858742",
+                "https://www.amazon.de/music/player/albums/B0CPJBSCJZ"
+            ]
+        }
+    ]
+}

@@ -3,106 +3,48 @@
   <head>
     <!-- Metadatos del documento -->
     <meta charset="UTF-8" />
-    <!-- Codificación de caracteres -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Ajuste de la escala para dispositivos móviles -->
     <meta
       name="description"
       content="ODISEA, Banda de Metal Alternativo de la provincia de Cádiz"
     />
-    <!-- Descripción del contenido -->
     <meta
       name="keywords"
       content="ODISEA, Heavy Metal, Metal Alternativo, Cádiz, provincia de Cádiz,"
     />
-    <!-- Palabras clave para SEO -->
     <meta
       name="author"
       content="Alejandro Ramos Rodríguez, Alejandro Sanz Huerta"
     />
-    <!-- Autor/es del documento -->
     <link rel="icon" href="../ico/SIMBOLO_ICONO.ico" type="image/x-icon" />
-    <!-- Icono de la página -->
-    <title>ODISEA</title>
+    <title>ODISEA - Conciertos</title>
 
     <!-- Scripts -->
+    <script defer src="../js/cargarConciertos.js"></script>
     <script defer src="../js/cargarHeaderFooter.js"></script>
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/comun.css" />
-    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/conciertos.css" />
 
     <!-- Fuentes -->
-      <!-- Altasi -->
-      <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <!-- Encabezado-->
     <header></header>
-    <main id="main">
-      <!-- Contenido principal de la página -->
-      <h1>Conciertos</h1>
-      <!-- Sección con la información de los conciertos -->
-      <section>
-        <!-- Título de la sección -->
-        <h2>Próximos conciertos</h2>
-        <!-- Contenido de la sección -->
-        <p>
-          A continuación, se muestra un listado con los próximos conciertos de
-          la banda:
-        </p>
-        <!-- Lista con los conciertos -->
-        <ul>
-          <!-- Primer concierto -->
-          <li>
-            <!-- Fecha del concierto -->
-            <time datetime="2022-10-15">15 de octubre de 2022</time>
-            <!-- Lugar del concierto -->
-            <span> - Sala XYZ, Cádiz</span>
-          </li>
-          <!-- Segundo concierto -->
-          <li>
-            <!-- Fecha del concierto -->
-            <time datetime="2022-11-20">20 de noviembre de 2022</time>
-            <!-- Lugar del concierto -->
-            <span> - Sala ABC, Jerez de la Frontera</span>
-          </li>
-          <!-- Tercer concierto -->
-          <li>
-            <!-- Fecha del concierto -->
-            <time datetime="2022-12-25">25 de diciembre de 2022</time>
-            <!-- Lugar del concierto -->
-            <span> - Sala 123, San Fernando</span>
-          </li>
-        </ul>
-      </section>
-      <!-- Sección con la información de conciertos anteriores -->
-      <section>
-        <!-- Título de la sección -->
-        <h2>Conciertos anteriores</h2>
-        <!-- Contenido de la sección -->
-        <p>
-          A continuación, se muestra un listado con los conciertos que ya han
-          tenido lugar:
-        </p>
-        <!-- Lista con los conciertos -->
-        <ul>
-          <!-- Primer concierto -->
-          <li>
-            <!-- Fecha del concierto -->
-            <time datetime="2022-09-10">10 de septiembre de 2022</time>
-            <!-- Lugar del concierto -->
-            <span> - Sala 456, El Puerto de Santa María</span>
-          </li>
-          
-        </ul>
-      </section>
-
-    </main>
-  <!-- Pie de página con enlaces de navegación, información de contacto y enlaces a redes sociales -->
-  <footer></footer>
-
+    <!-- Sección de conciertos -->
+    <section id="conciertos">
+      <h1>Próximos Conciertos</h1>
+    </section>
+    <section id="conciertosAnteriores">
+      <h1>Conciertos anteriores</h1>
+    </section>
+    <!-- Pie de página -->
+    <footer></footer>
   </body>
 </html>
