@@ -143,13 +143,25 @@ body::-webkit-scrollbar {
 	justify-content: center; /* Centra los íconos horizontalmente */
 	gap: 30px; /* Espacio entre los íconos */
 	margin-top: 10px; /* Espacio adicional entre el H2 y los íconos */
+	align-items: center; /* Centra los íconos verticalmente */
 }
+
 
 .IconosCanciones a img {
 	/* Reducir el tamaño de las imágenes */
 	width: 3em;
 	height: 3em;
 	transition: opacity 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+#IconoYoutube
+{
+	height: 2.3em;
+}
+
+/* Selecciona un elemento <div> que tenga un hijo <p> con la clase "highlight" */
+a:has(> #IconoYoutube) {
+	height: 2.3em;
 }
 
 .IconosCanciones a img:hover {

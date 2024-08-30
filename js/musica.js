@@ -61,12 +61,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Configuración de los enlaces
         divisor.appendChild(divisorEnlaces)
-        divisorEnlaces.classList.add('IconosMusica')
+        divisorEnlaces.classList.add('IconosCanciones')
         for (let j = 0; j < data.Musica[i].Enlaces.length; j++) {
           let enlace = document.createElement('a')
           enlace.href = data.Musica[i].Enlaces[j]
           let img = document.createElement('img')
           img.src = '../ico/' + enlaces[j] + '.png'
+          if (j == 1) img.id = "IconoYoutube"
           img.alt = enlaces[j]
           enlace.appendChild(img)
           divisorEnlaces.appendChild(enlace)
