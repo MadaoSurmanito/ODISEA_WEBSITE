@@ -1,49 +1,210 @@
 body {
-    padding-top: 0;
+	padding-top: 0;
 }
 
 /* Estilo general para los artículos */
 article {
-    display: flex;
-    margin: 0 auto;
-    padding: 70px 0;
-    height: calc(100vh - 70px); 
-    align-items: center;
-    justify-content: flex-start; /* Alinea el contenido al inicio para que la portada esté a la izquierda */
-    flex-direction: row;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    scroll-margin-top: 70px; /* Compensa el header fijo para evitar desplazamiento al cargar */
+	display: flex;
+	margin: 0 auto;
+	padding: 70px 0;
+	height: calc(100vh - 70px);
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: row;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	scroll-margin-top: 70px;
 }
 
 /* Mostrar el artículo cuando esté visible en pantalla */
 article.visible {
-    opacity: 1; /* Mostrar el artículo */
-    transform: translateY(0); /* Restablecer la posición */
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .portada {
-    /* Centrar la imagen */
-    display: block;
-    margin-left: 15em; /* Margen izquierdo de 15em */
-    /* Poner una sombra al rededor de la imagen */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    /* Hacer que ocupe el 100% del ancho */
-    width: 20%;
-    transition: opacity 0.3s, transform 0.3s; /* Transiciones suaves */
+	display: block;
+	margin-left: 15em;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	width: 20%;
+	transition: opacity 0.3s, transform 0.3s;
 }
 
 .infoCancion {
-    width: 70%; /* Ajusta el ancho para que se alinee con la portada */
-    display: flex;
-    margin-left: 10em;
-    margin-right: 10em;
-    flex-direction: column;
-    align-items: flex-start; /* Alinea el contenido al inicio para que esté en la misma fila que la portada */
-    justify-content: center; /* Asegura que el contenido esté centrado verticalmente */
+	width: 70%;
+	display: flex;
+	margin-left: 10em;
+	margin-right: 10em;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
 }
 
 .album {
-    padding-bottom: 0;
+	flex-direction: column;
 }
+
+.contenedorAlbum {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 5em;
+}
+
+/* Estilo para la lista de canciones */
+.listaCanciones {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Estilo para cada ítem de la lista de canciones */
+.itemCancion {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
+}
+
+/* Contenedor para cada canción */
+.contenedorCancion {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+}
+
+/* Estilo para los elementos dentro de cada canción */
+.contenedorCancion h3,
+.contenedorCancion p,
+.contenedorCancion span {
+	margin: 0;
+	padding: 0;
+	margin-right: 20px;
+}
+
+/* Estilo para los enlaces dentro de cada canción */
+.contenedorCancion .IconosCanciones {
+	display: flex;
+	width: 300px;
+	justify-content: space-around;
+}
+
+/* Estilo para las imágenes de los enlaces */
+.contenedorCancion .IconosCanciones img {
+	scale: 0.75;
+}
+
+.listaCanciones h3 {
+	width: 100px;
+}
+
+.listaCanciones p {
+	width: 300px;
+}
+
+/* Estilo para el pop-up */
+.popUp {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #333;
+	padding: 20px;
+	border-radius: 10px;
+	z-index: 1000;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+	white-space: pre-wrap;
+	max-width: 80%;
+	max-height: 80%;
+	overflow-y: auto;
+	transition: transform 0.3s ease-out;
+}
+
+/* Poner el scroll lateral del pop-up  de color rojo */
+.popUp::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+.popUp::-webkit-scrollbar-thumb {
+    background: #d40000;
+    border-radius: 10px;
+}
+
+.popUp::-webkit-scrollbar-track {
+    background: #333;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.popUp.aparece {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.popUp h2 {
+	margin-top: 0;
+	font-size: 1.5em;
+	/*center text*/
+	text-align: center;
+}
+
+.popUp p {
+	margin-top: 0;
+	font-size: 1.5em;
+}
+
+#tituloPopUp p {
+	margin-top: 0;
+	font-size: 1em;
+}
+
+.popUpCerrar {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	font-size: 24px;
+	color: red;
+}
+
+.descripcionPopUp:hover {
+	color: #4caf50;
+}
+
+.botonLetra {
+	margin-top: 10px;
+	padding: 0;
+	background: none;
+	color: #4caf50;
+	border: none;
+	font-size: 1em;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.botonLetra:hover {
+	color: #45a049;
+}
+
+.fondoNegro {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 1000;
+	opacity: 0.7;
+}
+
+.numeroTrack {
+	width: 10px;
+}
+

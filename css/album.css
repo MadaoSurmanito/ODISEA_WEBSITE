@@ -1,57 +1,87 @@
 body {
-    margin: 0;
-    padding-top: 70px;
-    background: black;
-    color: white;
-    font-family: "Alatsi", sans-serif;
+  margin: 0;
+  padding-top: 70px;
+  background: black;
+  color: white;
+  font-family: "Alatsi", sans-serif;
+}
+
+#album-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Ajuste para la primera hilera de imágenes */
+#album-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  margin-top: 20px; /* Más espacio para la primera hilera */
+}
+
+/* Animación de zoom en las imágenes al cargar */
+#album-images img {
+  max-width: 300px;
+  max-height: 200px;
+  border-radius: 10px;
+  transform: scale(0);
+  animation: zoomIn 0.5s forwards;
+  transition: transform 0.3s ease;
+}
+
+/* Animación para el zoom-in */
+@keyframes zoomIn {
+  from {
+      transform: scale(0.9);
   }
-  
-  /* Estilo para el título del álbum */
-  #album-title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
+  to {
+      transform: scale(1);
   }
-  
-  /* Estilo para el contenedor de imágenes del álbum */
-  #album-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
+}
+
+#album-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen en pantalla completa */
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fullscreen img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.zoom-in {
+  animation: zoomIn 0.5s ease-in-out;
+}
+
+/* Animación para el desplazamiento hacia la izquierda */
+@keyframes slideLeft {
+  from {
+      transform: translateX(0);
   }
-  
-  /* Estilo para cada imagen */
-  #album-images img {
-    max-width: 300px; /* Limitar el tamaño máximo de las imágenes */
-    max-height: 200px; /* Limitar el tamaño máximo de las imágenes */
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+  to {
+      transform: translateX(-20px); /* Desplaza la imagen 20px hacia la izquierda */
   }
-  
-  #album-images img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Estilo para imagen en pantalla completa */
-  .fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .fullscreen img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  
+}
+
+.slide-left {
+  animation: slideLeft 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}

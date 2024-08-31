@@ -1,54 +1,54 @@
-body {
-    margin: 0;
-    padding-top: 70px;
-    background: black;
-    color: white;
-    font-family: "Alatsi", sans-serif;
-  }
+.album {
+	background-color: #333;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 15px;
+	width: 250px; /* Tamaño inicial para las tarjetas de álbum */
+	text-align: center;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	position: relative;
+	cursor: pointer;
+}
+main{
+  /* display: en forma de cuadricula */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  margin-top: 20px;
   
-  /* Estilos para los títulos principales */
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5em;
-  }
-  
-  /* Estilo para la lista de álbumes */
-  #albums {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .album {
-    background-color: #333;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 15px;
-    width: 250px; /* Tamaño fijo para las tarjetas de álbum */
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .album:hover {
-    transform: scale(1.05);
-  }
-  
-  .album a {
-    text-decoration: none;
-    color: white;
-    display: block;
-  }
-  
-  .album img {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid #444;
-  }
-  
-  .album h2 {
-    margin: 10px 0;
-    font-size: 1.5em;
-  }
-  
+}
+.album:hover {
+	transform: scale(1.05); /* Ampliar ligeramente la imagen y el botón */
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Añadir una sombra */
+}
+
+.album img {
+	width: 100%;
+	height: auto;
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.album:hover img {
+	transform: scale(1.1); /* Ampliar la imagen al pasar el ratón */
+	filter: brightness(0.7); /* Oscurecer la imagen ligeramente */
+}
+
+/* Contenedor para el título que se superpone a la imagen */
+.title-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 0;
+	background-color: rgba(0, 0, 0, 0.6); /* Oscurecimiento con transparencia */
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.album:hover .title-overlay {
+	opacity: 1; /* Mostrar el título al pasar el ratón */
+}

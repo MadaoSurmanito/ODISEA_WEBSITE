@@ -1,157 +1,216 @@
 document.addEventListener('DOMContentLoaded', function () {
   fetch('../data/musica.json')
-    .then((response) => response.json())
-    .then((data) => {
-      let seccionPadre = document.getElementById('musica')
+    .then(response => response.json())
+    .then(data => {
+      const seccionPadre = document.getElementById('musica');
 
       // Ordenar el array de canciones por fecha de publicación
-      data.Musica.sort((a, b) => {
-        return new Date(b.Fecha) - new Date(a.Fecha)
-      })
+      data.Musica.sort((a, b) => new Date(b.Fecha) - new Date(a.Fecha));
 
-      for (let i = 0; i < data.Musica.length; i++) {
-        // Crear el artículo
-        let articulo = document.createElement('article')
+      data.Musica.forEach((item, index) => {
+        const articulo = document.createElement('article');
+        const portada = createImage(item.Portada, item.Titulo, 'portada');
+        const infoAlbum = createInfoAlbum(item);
 
-        // Info de la canción
-        let portada = document.createElement('img')
-        let divisor = document.createElement('div')
-        let divisorEnlaces = document.createElement('div')
-        let titulo = document.createElement('h2')
-        let descripcion = document.createElement('p')
-        let fecha = document.createElement('p')
-        let autor = document.createElement('p')
-        let enlaces = ['Spotify', 'Youtube', 'Apple', 'Amazon']
-
-        // Configuración de la portada
-        portada.src = data.Musica[i].Portada
-        portada.alt = data.Musica[i].Titulo
-        portada.classList.add('portada')
-        articulo.appendChild(portada)
-
-        // Configuración del divisor
-        articulo.appendChild(divisor)
-        divisor.classList.add('infoCancion')
-
-        // Configuración del título
-        titulo.innerHTML = data.Musica[i].Titulo
-        divisor.appendChild(titulo)
-
-        // Configuración de la descripción
-        descripcion.innerHTML = data.Musica[i].Descripcion
-        divisor.appendChild(descripcion)
-
-        // Configuración de la fecha
-        let fechaPublicacion = new Date(data.Musica[i].Fecha)
-        fecha.innerHTML =
-          'Fecha de publicación: ' +
-          fechaPublicacion.getDate() +
-          '/' +
-          (fechaPublicacion.getMonth() + 1) +
-          '/' +
-          fechaPublicacion.getFullYear()
-        divisor.appendChild(fecha)
-
-        // Configuración del autor
-        if (data.Musica[i].Autor != null) {
-          autor.innerHTML = data.Musica[i].Autor
-          divisor.appendChild(autor)
-        }
-
-        // Configuración de los enlaces
-        if (data.Musica[i].Enlaces.length == 0) {
-          // Crea un p con un mensaje de error
-          let error = document.createElement('p')
-          error.innerHTML = 'Actualmente no disponible.'
-          divisor.appendChild(error)
+        if (item.Tipo === 'Album') {
+          articulo.classList.add('album');
+          const contenedorAlbum = createContainerAlbum(portada, infoAlbum);
+          articulo.appendChild(contenedorAlbum);
+          articulo.appendChild(createListaCanciones(item.Canciones));
         } else {
-          divisor.appendChild(divisorEnlaces)
-          divisorEnlaces.classList.add('IconosCanciones')
-          for (let j = 0; j < data.Musica[i].Enlaces.length; j++) {
-            let enlace = document.createElement('a')
-            enlace.href = data.Musica[i].Enlaces[j]
-            let img = document.createElement('img')
-            img.src = '../ico/' + enlaces[j] + '.png'
-            if (j == 1) img.id = 'IconoYoutube'
-            img.alt = enlaces[j]
-            enlace.appendChild(img)
-            divisorEnlaces.appendChild(enlace)
-          }
+          articulo.appendChild(portada);
+          articulo.appendChild(infoAlbum);
         }
 
-        // Añadir el artículo al DOM
-        seccionPadre.appendChild(articulo)
-
-        // Si el tipo es "Album", mostrar la lista de canciones debajo del artículo
-        if (data.Musica[i].Tipo === 'Album') {
-          // POnerle al aarticulo la calse album
-          articulo.classList.add('album')
-          let listaCanciones = document.createElement('ul')
-          listaCanciones.classList.add('listaCanciones')
-
-          data.Musica[i].Canciones.forEach((cancion) => {
-            let itemCancion = document.createElement('li')
-            let tituloCancion = document.createElement('h3')
-            let descripcionCancion = document.createElement('p')
-            let autorCancion = document.createElement('p')
-
-            tituloCancion.innerHTML = cancion.Titulo
-            descripcionCancion.innerHTML = cancion.Descripcion
-            autorCancion.innerHTML = cancion.Autor
-
-            itemCancion.appendChild(tituloCancion)
-            itemCancion.appendChild(descripcionCancion)
-            itemCancion.appendChild(autorCancion)
-
-            // Configuración de los enlaces de la canción
-            if (cancion.Enlaces.length == 0) {
-              let errorCancion = document.createElement('p')
-              errorCancion.innerHTML = 'Actualmente no disponible.'
-              itemCancion.appendChild(errorCancion)
-            } else {
-              let divisorEnlacesCancion = document.createElement('div')
-              divisorEnlacesCancion.classList.add('IconosCanciones')
-              for (let j = 0; j < cancion.Enlaces.length; j++) {
-                let enlaceCancion = document.createElement('a')
-                enlaceCancion.href = cancion.Enlaces[j]
-                let imgCancion = document.createElement('img')
-                imgCancion.src = '../ico/' + enlaces[j] + '.png'
-                if (j == 1) imgCancion.id = 'IconoYoutube'
-                imgCancion.alt = enlaces[j]
-                enlaceCancion.appendChild(imgCancion)
-                divisorEnlacesCancion.appendChild(enlaceCancion)
-              }
-              itemCancion.appendChild(divisorEnlacesCancion)
-            }
-
-            listaCanciones.appendChild(itemCancion)
-          })
-
-          seccionPadre.appendChild(listaCanciones)
-        }
-      }
+        seccionPadre.appendChild(articulo);
+      });
 
       // Agregar animación de aparición en el viewport
-      const articles = document.querySelectorAll('article')
+      const articles = document.querySelectorAll('article');
+      window.addEventListener('scroll', () => handleScroll(articles));
+      handleScroll(articles);
+    });
 
-      const isInViewport = (element) => {
-        const rect = element.getBoundingClientRect()
-        return rect.top < window.innerHeight && rect.bottom > 0
+  function createImage(src, alt, className) {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = alt;
+    img.classList.add(className);
+    return img;
+  }
+
+  function createInfoAlbum(item) {
+    const infoAlbum = document.createElement('div');
+    infoAlbum.classList.add('infoCancion');
+
+    const titulo = createElementWithText('h2', item.Titulo);
+    const fecha = createElementWithText('p', formatDate(item.Fecha));
+    infoAlbum.appendChild(titulo);
+    infoAlbum.appendChild(fecha);
+
+    if (item.Autor) {
+      const autor = createElementWithText('p', item.Autor);
+      infoAlbum.appendChild(autor);
+    }
+
+    if (item.Enlaces.length > 0) {
+      const divisorEnlaces = createEnlacesDiv(item.Enlaces);
+      infoAlbum.appendChild(divisorEnlaces);
+    } else {
+      const error = createElementWithText('p', 'Actualmente no disponible.');
+      infoAlbum.appendChild(error);
+    }
+
+    if (item.BreveDescripcion) {
+      const breveDescripcion = createElementWithText('p', item.BreveDescripcion);
+      infoAlbum.appendChild(breveDescripcion);
+    }
+
+    const descripcion = createElementWithText('p', 'Ver descripción');
+    descripcion.classList.add('descripcionPopUp');
+    descripcion.addEventListener('click', () => mostrarPopUp(item.Descripcion));
+    infoAlbum.appendChild(descripcion);
+
+    return infoAlbum;
+  }
+
+  function createElementWithText(tag, text) {
+    const element = document.createElement(tag);
+    element.innerHTML = text;
+    return element;
+  }
+
+  function formatDate(fecha) {
+    const fechaPublicacion = new Date(fecha);
+    return `Fecha de publicación: ${fechaPublicacion.getDate()}/${fechaPublicacion.getMonth() + 1}/${fechaPublicacion.getFullYear()}`;
+  }
+
+  function createEnlacesDiv(enlaces) {
+    
+    enlaces = ['Spotify', 'Youtube', 'Apple', 'Amazon'];
+    const divisorEnlaces = document.createElement('div');
+    divisorEnlaces.classList.add('IconosCanciones');
+
+    enlaces.forEach((url, index) => {
+      const enlace = document.createElement('a');
+      enlace.href = url;
+
+      const img = createImage(`../ico/${enlaces[index]}.png`, enlaces[index]);
+      if (index === 1) img.id = 'IconoYoutube';
+      enlace.appendChild(img);
+
+      divisorEnlaces.appendChild(enlace);
+    });
+
+    return divisorEnlaces;
+  }
+
+  function createContainerAlbum(portada, infoAlbum) {
+    const contenedorAlbum = document.createElement('div');
+    contenedorAlbum.classList.add('contenedorAlbum');
+    contenedorAlbum.appendChild(portada);
+    contenedorAlbum.appendChild(infoAlbum);
+    return contenedorAlbum;
+  }
+
+  function createListaCanciones(canciones) {
+    const listaCanciones = document.createElement('ul');
+    listaCanciones.classList.add('listaCanciones');
+
+    canciones.forEach((cancion, index) => {
+      const itemCancion = document.createElement('li');
+      itemCancion.classList.add('itemCancion');
+
+      const numeroTrack = createElementWithText('span', `${index + 1}.`);
+      numeroTrack.classList.add('numeroTrack');
+
+      const contenedorCancion = document.createElement('div');
+      contenedorCancion.classList.add('contenedorCancion');
+      contenedorCancion.appendChild(numeroTrack);
+      contenedorCancion.appendChild(createElementWithText('h3', cancion.Titulo));
+      contenedorCancion.appendChild(createDescripcionCancion(cancion.Descripcion));
+      contenedorCancion.appendChild(createElementWithText('p', cancion.Autor));
+
+      if (cancion.Letra) {
+        const botonLetra = document.createElement('button');
+        botonLetra.innerHTML = 'Letra';
+        botonLetra.classList.add('botonLetra');
+        botonLetra.addEventListener('click', () => {
+          fetch(cancion.Letra)
+            .then(response => response.text())
+            .then(letra => mostrarPopUp_letra(letra, cancion.Titulo));
+        });
+        contenedorCancion.appendChild(botonLetra);
       }
 
-      const handleScroll = () => {
-        articles.forEach((article) => {
-          if (isInViewport(article)) {
-            article.classList.add('visible')
-          } else {
-            article.classList.remove('visible')
-          }
-        })
+      if (cancion.Enlaces.length > 0) {
+        const divisorEnlacesCancion = createEnlacesDiv(cancion.Enlaces);
+        contenedorCancion.appendChild(divisorEnlacesCancion);
+      } else {
+        const errorCancion = createElementWithText('p', 'Actualmente no disponible.');
+        contenedorCancion.appendChild(errorCancion);
       }
 
-      window.addEventListener('scroll', handleScroll)
+      itemCancion.appendChild(contenedorCancion);
+      listaCanciones.appendChild(itemCancion);
+    });
 
-      // Ejecutar handleScroll inmediatamente después de añadir los artículos
-      handleScroll()
-    })
-})
+    return listaCanciones;
+  }
+
+  function createDescripcionCancion(descripcion) {
+    const descripcionCancion = createElementWithText('p', 'Ver descripción');
+    descripcionCancion.classList.add('descripcionPopUp');
+    descripcionCancion.addEventListener('click', () => mostrarPopUp(descripcion));
+    return descripcionCancion;
+  }
+
+  function handleScroll(articles) {
+    articles.forEach(article => {
+      const rect = article.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      article.classList.toggle('visible', isVisible);
+    });
+  }
+
+  function mostrarPopUp(contenido) {
+    createPopUp(contenido);
+  }
+
+  function mostrarPopUp_letra(contenido, titulo) {
+    createPopUp(contenido, titulo);
+  }
+
+  function createPopUp(contenido, titulo) {
+    const popUp = document.createElement('div');
+    popUp.classList.add('popUp');
+
+    if (titulo) {
+      const popUpTitulo = createElementWithText('h2', titulo);
+      // Ponerle ID al popUp para poder hacer scroll hasta él
+      popUp.id = 'tituloPopUp'
+      popUp.appendChild(popUpTitulo);
+    }
+
+    const popUpContenido = createElementWithText('p', contenido);
+    popUp.appendChild(popUpContenido);
+
+    const popUpCerrar = createElementWithText('span', '&times;');
+    popUpCerrar.classList.add('popUpCerrar');
+    popUpCerrar.addEventListener('click', closePopUp);
+    popUp.appendChild(popUpCerrar);
+
+    const fondoNegro = document.createElement('div');
+    fondoNegro.classList.add('fondoNegro');
+
+    document.body.appendChild(fondoNegro);
+    document.body.appendChild(popUp);
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePopUp() {
+    document.querySelector('.popUp').remove();
+    document.querySelector('.fondoNegro').remove();
+    document.body.style.overflow = 'auto';
+  }
+});

@@ -1,0 +1,4 @@
+Las imagenes deben llamarse image(X) para que funcione
+Da igual la extensión que tengan
+Todas las galerias deberan estar registradas en ../data/galeria.json
+

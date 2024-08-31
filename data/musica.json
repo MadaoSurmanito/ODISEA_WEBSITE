@@ -2,9 +2,10 @@
   "Musica": [
     {
       "Tipo": "Album",
-      "Portada": "../img/Portadas/ODISEA-VOL1.png",
+      "Portada": "../img/Portadas/ODISEA-VOL1.jpeg",
       "Titulo": "ODISEA VOL. 1",
       "Descripcion": "Nuestra primera maqueta con la formación primigénea de la banda",
+      "BreveDescripcion": "Este es un adelanto de nuestro próximo álbum.",
       "Fecha": "2023-06-09",
       "Enlaces": [],
       "Canciones": [
@@ -12,25 +13,34 @@
           "Titulo": "Nuestra",
           "Descripcion": "Intoducción a nuestra maqueta con la que abriamos los conciertos",
           "Autor": "Música: Alejandro, Letras: Espe",
-          "Enlaces": []
+          "Enlaces": [],
+          "Letra": "../letras/letraFW&D.txt"
         },
         {
           "Titulo": "Venganza",
           "Descripcion": "Descripcion de venganza",
           "Autor": "Música: Alejandro, Letras: Espe",
-          "Enlaces": []
+          "Enlaces": [],
+          "Letra": "../letras/venganza.txt"
         },
         {
           "Titulo": "Ahora soy yo",
           "Descripcion": "Descripcion de Ahora soy yo",
           "Autor": "Música: Alejandro, Letras: Espe",
-          "Enlaces": []
+          "Enlaces": [],
+          "Letra": "../letras/ahora_soy_yo.txt"
         },
         {
           "Titulo": "Fantasma",
           "Descripcion": "Descripcion de fantasma",
           "Autor": "Música: Alejandro, Letras: Espe",
-          "Enlaces": []
+          "Enlaces": [
+            "https://open.spotify.com/intl-es/track/5rwxaxl13i72uVBexoOqAd?si=41f46c1d1fbe4bb4",
+            "https://www.youtube.com/watch?v=lgNqXdiRuRU",
+            "https://music.apple.com/es/album/fight-war-and-dreams-ntwe-single/1719858742",
+            "https://www.amazon.de/music/player/albums/B0CPJBSCJZ"
+          ],
+          "Letra": "../letras/ahora_soy_yo.txt"
         }
       ]
     },
@@ -38,7 +48,8 @@
       "Tipo": "Single",
       "Portada": "../img/Portadas/PORTADASINGLEFIGHTWARANDDREAMSv2.jpg",
       "Titulo": "Fight, War & Dreams (NTWE)",
-      "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non turpis at magna pretium ornare vel a ex. Vivamus tincidunt ullamcorper nisl at varius. Nam ultrices accumsan odio, at posuere eros sollicitudin sit amet. Maecenas tempus, nulla quis bibendum scelerisque, tortor mi elementum enim, id tempor metus neque et est. Proin gravida nisl in eros sagittis suscipit. Nunc blandit, sem non tempor condimentum, nisl sapien consequat mauris, nec porta arcu erat eu felis. Curabitur metus justo, feugiat a purus sed, mollis congue magna. Donec pellentesque lectus vitae elit dictum, quis suscipit felis feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquam tellus in lectus bibendum, id rutrum purus dapibus. Nullam in velit vel nunc euismod pharetra. Phasellus ac lacinia nibh. Fusce sit amet nibh odio. Ut eget diam vehicula, aliquam metus non, fringilla dui. Aenean vitae sapien porta, efficitur massa ornare, vestibulum risus. Pellentesque cursus rhoncus lectus quis convallis. Duis molestie sit amet lectus a gravida. Cras justo mauris, scelerisque et ipsum tempor, aliquam gravida quam. Donec neque urna, vulputate semper placerat et, tincidunt at odio. Morbi et arcu id massa dapibus fermentum. Aenean suscipit aliquet nulla ac convallis. Etiam vestibulum iaculis est, eget vestibulum felis fringilla a. Nunc semper dapibus augue quis mollis. Pellentesque pulvinar urna quis quam finibus, egestas rhoncus ex consequat. Morbi sit amet dolor orci. Nullam vitae ex ultricies felis laoreet gravida id a leo.",
+      "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas quam quis semper sollicitudin. Ut sed nulla tristique, accumsan purus at, malesuada elit. Sed quis commodo dolor. Pellentesque sodales vitae tellus vel vestibulum. Nulla facilisi. Nulla sit amet mauris velit. Donec efficitur convallis laoreet. Curabitur eu ipsum quis elit scelerisque malesuada. Sed volutpat a eros id tempus. Pellentesque vitae interdum quam. Aenean ligula lacus, aliquam et efficitur id, ornare hendrerit augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et quam et neque pulvinar molestie. Nulla nulla libero, blandit sit amet fermentum in, scelerisque a libero. Nunc erat nunc, malesuada id tempus non, ultricies laoreet nulla.",
+      "BreveDescripcion": "Este es un adelanto de nuestro próximo álbum.",
       "Fecha": "2024-12-07",
       "Autor": "Música: Alejandro Sanz Huerta, Letras: Lucía Palma Gragera",
       "Enlaces": [
@@ -46,16 +57,8 @@
         "https://www.youtube.com/watch?v=lgNqXdiRuRU",
         "https://music.apple.com/es/album/fight-war-and-dreams-ntwe-single/1719858742",
         "https://www.amazon.de/music/player/albums/B0CPJBSCJZ"
-      ]
-    },
-    {
-      "Tipo": "Single",
-      "Portada": "../img/Portadas/PortadaDePrueba.jpg",
-      "Titulo": "Cancion De mierda 1",
-      "Descripcion": "Cancion de prueba para ver si funciona",
-      "Fecha": "1923-02-29",
-      "Autor": "Peshugah",
-      "Enlaces": ["", "", "", ""]
+      ],
+      "Letra": "../letras/fight_war_dreams.txt"
     }
   ]
 }

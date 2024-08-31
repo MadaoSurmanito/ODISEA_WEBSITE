@@ -2,11 +2,13 @@
   "Galeria": [
     {
       "Titulo": "Marinaleda",
-      "Directorio": "../galery/Marinaleda/"
+      "Directorio": "../galery/Marinaleda/",
+      "Portada": "../galery/Marinaleda/image(3).jpg"
     },
     {
       "Titulo": "Primer Concierto",
-      "Directorio": "../galery/PrimerConcierto/"
+      "Directorio": "../galery/PrimerConcierto/",
+      "Portada": "../galery/PrimerConcierto/image(2).jpeg"
     }
   ]
 }
