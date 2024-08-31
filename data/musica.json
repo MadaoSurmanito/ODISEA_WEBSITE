@@ -7,40 +7,35 @@
       "Descripcion": "Nuestra primera maqueta con la formación primigénea de la banda",
       "BreveDescripcion": "Este es un adelanto de nuestro próximo álbum.",
       "Fecha": "2023-06-09",
-      "Enlaces": [],
+      "Enlaces": ["https://www.youtube.com/watch?v=Fa-Yhm1LqkQ&list=PLKxG09YDDn9RA4DoH7NlZ1-m1jGnMhKut"],
       "Canciones": [
         {
           "Titulo": "Nuestra",
           "Descripcion": "Intoducción a nuestra maqueta con la que abriamos los conciertos",
           "Autor": "Música: Alejandro, Letras: Espe",
           "Enlaces": [],
-          "Letra": "../letras/letraFW&D.txt"
+          "Letra": "../letras/nuestra.txt"
         },
         {
           "Titulo": "Venganza",
           "Descripcion": "Descripcion de venganza",
           "Autor": "Música: Alejandro, Letras: Espe",
-          "Enlaces": [],
+          "Enlaces": ["https://www.youtube.com/watch?v=Fa-Yhm1LqkQ"],
           "Letra": "../letras/venganza.txt"
         },
         {
           "Titulo": "Ahora soy yo",
           "Descripcion": "Descripcion de Ahora soy yo",
           "Autor": "Música: Alejandro, Letras: Espe",
-          "Enlaces": [],
-          "Letra": "../letras/ahora_soy_yo.txt"
+          "Enlaces": ["https://www.youtube.com/watch?v=ipvMpxKpl7w"],
+          "Letra": "../letras/ahoraSoyYo.txt"
         },
         {
           "Titulo": "Fantasma",
           "Descripcion": "Descripcion de fantasma",
           "Autor": "Música: Alejandro, Letras: Espe",
-          "Enlaces": [
-            "https://open.spotify.com/intl-es/track/5rwxaxl13i72uVBexoOqAd?si=41f46c1d1fbe4bb4",
-            "https://www.youtube.com/watch?v=lgNqXdiRuRU",
-            "https://music.apple.com/es/album/fight-war-and-dreams-ntwe-single/1719858742",
-            "https://www.amazon.de/music/player/albums/B0CPJBSCJZ"
-          ],
-          "Letra": "../letras/ahora_soy_yo.txt"
+          "Enlaces": ["https://www.youtube.com/watch?v=I8YGLwvOlfk&t"],
+          "Letra": "../letras/fantasma.txt"
         }
       ]
     },
@@ -58,7 +53,7 @@
         "https://music.apple.com/es/album/fight-war-and-dreams-ntwe-single/1719858742",
         "https://www.amazon.de/music/player/albums/B0CPJBSCJZ"
       ],
-      "Letra": "../letras/fight_war_dreams.txt"
+      "Letra": "../letras/fw&d.txt"
     }
   ]
 }
