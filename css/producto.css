@@ -1,0 +1,56 @@
+/* Estilos para la página de detalle del producto */
+
+/* Estilos para la página de detalle del producto */
+
+#producto-section {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+	gap: 20px;
+}
+
+#producto-carrusel {
+	flex: 1;
+	min-width: 300px;
+	max-width: 500px;
+	position: relative;
+	overflow: hidden;
+}
+
+#producto-carrusel img {
+	width: 100%;
+	height: auto;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+#producto-carrusel img.active {
+	display: block;
+	opacity: 1;
+}
+
+#producto-info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#producto-info h1 {
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
+#producto-info p {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+#como-pedir {
+	padding: 20px;
+	background-color: #333;
+	margin-top: 20px;
+}

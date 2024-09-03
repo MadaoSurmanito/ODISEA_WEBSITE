@@ -1,0 +1,55 @@
+/* Estilos para la sección de Merchandising */
+
+#merch-section {
+	padding: 20px;
+}
+
+#merch-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.merch-item {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	overflow: hidden;
+	transition: transform 0.3s ease;
+}
+
+.merch-item:hover {
+	transform: scale(1.05);
+}
+
+.merch-item img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.merch-item h3 {
+	text-align: center;
+	padding: 10px;
+	font-size: 1.2em;
+}
+
+#como-pedir {
+	margin-top: 50px;
+	padding: 20px;
+	background-color: #f7f7f7;
+	border-top: 1px solid #ccc;
+}
+
+#como-pedir h2 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+#como-pedir p {
+	font-size: 1em;
+}
+
+#como-pedir a {
+	color: #333;
+	text-decoration: underline;
+}

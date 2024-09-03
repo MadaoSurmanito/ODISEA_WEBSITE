@@ -1,23 +1,45 @@
+/* Añade una animación de fade-in al cargar la página */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(
+			20px
+		); /* Añadir un pequeño desplazamiento hacia abajo */
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0); /* Vuelve a la posición original */
+	}
+}
+
 .album {
 	background-color: #333;
 	border-radius: 10px;
 	overflow: hidden;
 	margin: 15px;
-	width: 250px; /* Tamaño inicial para las tarjetas de álbum */
+	width: 100%; /* Hacer que la tarjeta ocupe todo el espacio del contenedor */
+	max-width: 500px; /* Establecer un ancho máximo para las tarjetas */
 	text-align: center;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	position: relative;
 	cursor: pointer;
+	opacity: 0; /* Comienza invisible */
+	animation: fadeIn 0.8s ease forwards; /* Animación de fade-in */
 }
-main{
-  /* display: en forma de cuadricula */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 15px;
-  padding: 20px;
-  margin-top: 20px;
-  
+
+main {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(300px, 1fr)
+	); /* Las tarjetas se adaptan al ancho disponible */
+	justify-content: center; /* Centrar el contenido */
+	justify-items: center; /* Centrar las tarjetas */
+	gap: 15px;
+	padding: 20px;
+	margin-top: 20px;
 }
+
 .album:hover {
 	transform: scale(1.05); /* Ampliar ligeramente la imagen y el botón */
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Añadir una sombra */

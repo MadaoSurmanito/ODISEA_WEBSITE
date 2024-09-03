@@ -1,5 +1,0 @@
-{
-Titulo: Puas.
-Descripción: Son puas, pa toca la guitarra, tan wapas.
-Precio: 1€.
-}

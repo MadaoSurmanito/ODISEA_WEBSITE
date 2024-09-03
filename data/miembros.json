@@ -1,0 +1,34 @@
+{
+  "Miembros": [
+    {
+      "Nombre": "Alex Beast",
+      "Foto": "../img/Alex.JPG",
+      "Biografia": "../data/bioAlex.txt",
+      "Playlist": "https://open.spotify.com/embed/playlist/1LfY84svEoXIN5eAnBkOKn?utm_source=generator"
+    },
+    {
+      "Nombre": "Espe Blasphemous",
+      "Foto": "../img/alejandro_ramos.jpg",
+      "Biografia": "../data/bioEspe.txt",
+      "Playlist": "https://open.spotify.com/embed/playlist/55p3Q1g6LIJ8r1QvFRSzxJ?utm_source=generator"
+    },
+    {
+        "Nombre": "Lucy Black",
+        "Foto": "../img/alejandro_ramos.jpg",
+        "Biografia": "../data/bioLucy.txt",
+        "Playlist": "https://open.spotify.com/embed/playlist/5OuW46WuL6Lx81qskwzb0e?utm_source=generator"
+      },
+    {
+      "Nombre": "Alvaro Guitarra",
+      "Foto": "../img/exandes.png",
+      "Biografia": "../data/bioExandes.txt",
+      "Playlist": "https://open.spotify.com/embed/playlist/2gCFkHLsNmtxXA24yz4MLl?utm_source=generator"
+    },
+    {
+        "Nombre": "Alvaro Bateria",
+        "Foto": "../img/alvaro.png",
+        "Biografia": "../data/bioAlvaro.txt",
+        "Playlist": "https://open.spotify.com/embed/playlist/0wmQEDt30DkqR0qK0DfeHD?utm_source=generator"
+      }
+  ]
+}

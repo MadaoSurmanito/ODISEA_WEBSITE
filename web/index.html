@@ -1,91 +1,76 @@
 <!DOCTYPE html>
-<!-- contraseña DNS: Puntito14. User:ExanDeS  -->
 <html lang="es">
   <head>
-    <!-- Metadatos del documento -->
     <meta charset="UTF-8" />
-    <!-- Codificación de caracteres -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Ajuste de la escala para dispositivos móviles -->
     <meta
       name="description"
       content="ODISEA, Banda de Metal Alternativo de la Bahía de Cádiz"
     />
-    <!-- Descripción del contenido -->
     <meta
       name="keywords"
-      content="ODISEA, Heavy Metal, Metal Alternativo, Cádiz, Bahía de Cádiz,"
+      content="ODISEA, Heavy Metal, Metal Alternativo, Cádiz, Bahía de Cádiz"
     />
-    <!-- Palabras clave para SEO -->
     <meta
       name="author"
       content="Alejandro Ramos Rodríguez, Alejandro Sanz Huerta"
     />
-    <!-- Autor/es del documento -->
     <meta name="robots" content="index, nofollow" />
-    <!-- Comportamiento de los robots de búsqueda -->
     <link rel="icon" href="../ico/SIMBOLO_ICONO.ico" type="image/x-icon" />
-    <!-- Icono de la página -->
     <title>ODISEA</title>
 
     <!-- Scripts -->
     <script defer src="../js/cargarHeaderFooter.js"></script>
+    <script defer src="../js/index.js"></script>
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/comun.css" />
     <link rel="stylesheet" href="../css/index.css" />
-
-    <!-- Fuentes -->
-      <!-- Altasi -->
-      <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
     <!-- Encabezado-->
     <header></header>
     <main>
-      <!-- Contenido principal de la página -->
-        <!-- Primer artículo con ultimas novedades-->
-        <article id="Articulo1">
-            <img src="../img/Portadas/PORTADASINGLEFIGHTWARANDDREAMSv2.jpg" alt="Foto del single" id="foto_single"/>
-          <!-- Texto de presentación -->
-          <!-- Título -->
-          <div>
-            <h2>FIGHT WAR & DREAMS</h2>
-            <h3>Nuestro primer single, ya disponible</h3>
-            <div class="IconosCanciones">
-            <a href="https://open.spotify.com/intl-es/track/5rwxaxl13i72uVBexoOqAd?si=41f46c1d1fbe4bb4">
-              <img src="../ico/Spotify.png" alt="Spotify"/>
-            </a>
-            <a href="https://www.youtube.com/watch?v=lgNqXdiRuRU">
-              <img id="Yutu" src="../ico/Youtube.png" alt="Spotify"/>
-            </a>
-              <a href="https://open.spotify.com/intl-es/track/5rwxaxl13i72uVBexoOqAd?si=41f46c1d1fbe4bb4">
-                <img src="../ico/Apple.png" alt="Spotify"/>
-            </a>
-            <a href="https://open.spotify.com/intl-es/track/5rwxaxl13i72uVBexoOqAd?si=41f46c1d1fbe4bb4">
-              <img src="../ico/Amazon.png" alt="Spotify"/>
-            </a>
+      <section id="carrusel">
+        <div class="carrusel-container">
+          <div class="carrusel-item active" id="musica-item">
+            <!-- Música cargada dinámicamente -->
           </div>
+ <!-- Productos destacados -->
+ <div id="productos-destacados" class="carrusel-item">
+  <h2>Descubre nuestro merchandising</h2>
+  <div class="productos-container">
+    <!-- Los productos destacados se insertarán aquí -->
+  </div>
+</div>
+          <div class="carrusel-item" id="conciertos-item">
+            <!-- Conciertos cargados dinámicamente -->
           </div>
-        </article>
-        
-        <img src="../img/FOTO_INDEX.png" alt="Foto de la banda" id="foto_index"/>
-        <!-- Sección con 3 productos destacados de nuestro merch -->
-        <section>
-          <!-- Título -->
-          <h2>Merchandising destacado</h2>
-            <article>
-             
-            </article>
-        </section>
-        
+        </div>
+      </section>
+
+      <!-- Foto y presentación -->
+      <section id="foto-presentacion">
+        <img
+          src="../img/FOTO_INDEX.png"
+          alt="Foto de la banda"
+          id="foto_index">
+          <div class="presentacion">
+            <h2>Bienvenidos a la web de ODISSEA</h2>
+            <p>
+              Explora nuestra música, conoce nuestros productos de merchandising y
+              no te pierdas nuestros próximos conciertos.
+            </p>
+          </div>
+        </img>  
+      </section>
     </main>
-    
-  <!-- Pie de página con enlaces de navegación, información de contacto y enlaces a redes sociales -->
-  <footer></footer>
 
-</body>
-
+    <!-- Pie de página -->
+    <footer></footer>
+  </body>
 </html>

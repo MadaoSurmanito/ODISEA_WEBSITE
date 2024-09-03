@@ -1,28 +1,28 @@
 {
   "Merch": [
     {
-      "Fotos": "../merch/Producto1",
+      "Fotos": "../merch/Producto1/",
       "Nombre": "Puas de guitarra",
       "Descripcion": "Son puas, pa toca la guitarra, tan wapas.",
       "Precio": "1€"
     },
     {
-        "Fotos": "../merch/Producto2",
-        "Nombre": "Pegatinas de vinilo",
-        "Descripcion": "",
-        "Precio": "1€"
-      },
-      {
-        "Fotos": "../merch/Producto3",
-        "Nombre": "Llaveros de madera",
-        "Descripcion": "",
-        "Precio": "2€"
-      },
-      {
-        "Fotos": "../merch/Producto4",
-        "Nombre": "Camisetas serigrafiadas",
-        "Descripcion": "",
-        "Precio": "15€"
-      }
+      "Fotos": "../merch/Producto2/",
+      "Nombre": "Pegatinas de vinilo",
+      "Descripcion": "",
+      "Precio": "1€"
+    },
+    {
+      "Fotos": "../merch/Producto4/",
+      "Nombre": "Llaveros de madera",
+      "Descripcion": "",
+      "Precio": "2€"
+    },
+    {
+      "Fotos": "../merch/Producto3/",
+      "Nombre": "Camisetas serigrafiadas",
+      "Descripcion": "",
+      "Precio": "15€"
+    }
   ]
 }
