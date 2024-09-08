@@ -1,0 +1,43 @@
+/* flechas.css */
+
+/* Flecha y texto de Scroll Down */
+.flecha-scroll-down {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	z-index: 100;
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out; /* Transición para el fade-out */
+}
+
+.flecha-abajo {
+	width: 20px;
+	height: 20px;
+	border-right: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	transform: rotate(45deg);
+	margin: 0 auto;
+	animation: moverFlecha 1.5s infinite;
+}
+
+@keyframes moverFlecha {
+	0% {
+		transform: translateY(0) rotate(45deg);
+	}
+	50% {
+		transform: translateY(10px) rotate(45deg);
+	}
+	100% {
+		transform: translateY(0) rotate(45deg);
+	}
+}
+
+/* Cuando la flecha se oculta */
+.flecha-scroll-down.hidden {
+	opacity: 0;
+}
+	

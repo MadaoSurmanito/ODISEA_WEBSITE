@@ -27,17 +27,20 @@
 
     <!-- Scripts -->
     <script defer src="../js/cargarHeaderFooter.js"></script>
-    
     <script defer src="../js/musica.js"></script>
-    <!-- Estilos -->
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/comun.css" />
     <link rel="stylesheet" href="../css/musica.css" />
+    <link rel="stylesheet" href="../css/flechas.css" />
+
+    <!-- Script de flechas -->
 
     <!-- Fuentes -->
-      <!-- Altasi -->
-      <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
-    
+    <!-- Altasi -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -45,8 +48,37 @@
     <header></header>
     <main>
       <section id="musica"></section>
+
+      <!-- Contenedor para las flechas -->
+      <div id="flechas-container">
+        <!-- Aquí se cargará flechas.html -->
+      </div>
     </main>
     <footer></footer>
-       
+
+    <!-- Script para cargar dinámicamente flechas.html -->
+    <script>
+      // Cargar el contenido de flechas.html en el contenedor
+      fetch('../web/flechas.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('flechas-container').innerHTML = data
+
+          // Ejecutar el script de flechas solo después de cargar el HTML
+          const scrollDownArrow = document.querySelector('.flecha-scroll-down')
+
+          if (scrollDownArrow) {
+            // Detectar el scroll para ocultar la flecha con fade-out
+            window.addEventListener('scroll', () => {
+              if (window.scrollY > 50) {
+                scrollDownArrow.classList.add('hidden')
+              } else {
+                scrollDownArrow.classList.remove('hidden')
+              }
+            })
+          }
+        })
+        .catch((error) => console.error('Error cargando flechas.html:', error))
+    </script>
   </body>
 </html>

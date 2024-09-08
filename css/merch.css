@@ -1,20 +1,54 @@
 /* Estilos para la sección de Merchandising */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+body {
+	margin: 0;
+	padding-top: 70px;
+	color: white;
+	font-family: "Alatsi", sans-serif;
+}
 
 #merch-section {
 	padding: 20px;
+	animation: fadeIn 1s ease-in-out;
+}
+
+#merch-section h1 {
+	text-align: center;
+	font-size: 2em;
+	margin-bottom: 20px;
 }
 
 #merch-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	gap: 20px;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(300px, 1fr)
+	); /* Las tarjetas se adaptan al ancho disponible */
+	justify-content: center; /* Centrar el contenido */
+	justify-items: center; /* Centrar las tarjetas */
+	gap: 15px;
+	padding: 20px;
+	margin-top: 20px;
+	animation: fadeIn 1s ease-in-out;
 }
 
 .merch-item {
-	border: 1px solid #ccc;
 	border-radius: 5px;
 	overflow: hidden;
 	transition: transform 0.3s ease;
+	animation: fadeIn 1s ease-in-out;
+	background-color: #333;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
 .merch-item:hover {
@@ -22,8 +56,8 @@
 }
 
 .merch-item img {
-	width: 100%;
-	height: auto;
+	width: 300px;
+	height: 300px;
 	display: block;
 }
 
@@ -33,23 +67,47 @@
 	font-size: 1.2em;
 }
 
+/* Estilos para la sección de Cómo pedir */
 #como-pedir {
-	margin-top: 50px;
-	padding: 20px;
-	background-color: #f7f7f7;
-	border-top: 1px solid #ccc;
+	margin: 10%;
+	background-color: #333;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+	border-radius: 30px;
+	height: auto; 
+	opacity: 0; /* Inicialmente oculto */
+	transform: translateY(20px);
+	transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+#como-pedir.show {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 #como-pedir h2 {
-	font-size: 1.5em;
+	font-size: 2.5em;
 	margin-bottom: 10px;
+	text-align: center;
 }
 
 #como-pedir p {
-	font-size: 1em;
+	margin: 1% 5%;
+	font-size: 1.5em;
+	text-align: justify;
+}
+
+#como-pedir ul {
+	margin: 0 5%;
+	font-size: 1.5em;
+	text-align: justify;
 }
 
 #como-pedir a {
-	color: #333;
+	color: #cfcfcf;
 	text-decoration: underline;
+}
+
+#como-pedir p:last-child {
+	margin-top: 0;
+	margin-bottom: 5%;
 }

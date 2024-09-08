@@ -32,3 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error('Error al cargar el JSON de productos:', error),
     )
 })
+
+/* Animación de aparición para el artículo de Cómo pedir al hacer scroll */
+document.addEventListener('scroll', function () {
+  const comoPedirSection = document.getElementById('como-pedir')
+  const triggerPoint = window.innerHeight * 0.8 // El punto en que aparece (80% del viewport)
+
+  if (window.scrollY > triggerPoint) {
+    comoPedirSection.classList.add('show')
+  }
+})

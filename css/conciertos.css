@@ -1,7 +1,6 @@
 body {
 	margin: 0;
 	padding-top: 70px;
-	background: black;
 	color: white;
 	font-family: "Alatsi", sans-serif;
 }
@@ -17,6 +16,9 @@ h1 {
 #conciertos,
 #conciertosAnteriores {
 	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #conciertos h1,
@@ -29,17 +31,21 @@ h1 {
 /* Estilo para cada artículo (concierto) */
 .concierto-item {
 	display: flex;
-	align-items: center;
 	margin-bottom: 30px;
-	background-color: #333;
+	background-color: #3333338f;
 	border-radius: 10px;
 	overflow: hidden;
+	width: 80%;
 	padding: 15px;
 	transition: transform 0.3s ease;
 }
 
-.concierto-item:hover {
-	transform: scale(1.03);
+/* Contenedor principal con flex fila */
+.concierto-item .main-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 }
 
 /* Estilo para la imagen del cartel */
@@ -51,33 +57,46 @@ h1 {
 	transition: transform 0.3s ease; /* Transición suave en el hover */
 }
 
+/* Ampliación del cartel al pasar el cursor */
 .concierto-item img.cartel:hover {
-	transform: scale(1.1); /* Ampliación al pasar el cursor */
+	transform: scale(1.1);
 }
 
 /* Estilo para la información del concierto */
 .concierto-item .infoConcierto {
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start; /* Centrar los elementos dentro del contenedor */
+	flex: 1; /* Asegura que el contenedor de info ocupa el espacio disponible */
 }
 
-.concierto-item .infoConcierto h2 {
-	font-size: 1.8em;
-	margin: 0 0 10px;
+/* Botón de entradas */
+.concierto-item .entradas-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end; /* Alinea el botón a la derecha */
+	width: 100%;
+
 }
 
-.concierto-item .infoConcierto p {
-	margin: 5px 0;
-	font-size: 1.2em;
-}
-
-/* Estilo específico para la lista de bandas */
-.concierto-item .infoConcierto p:last-child {
-	font-weight: bold;
+.button {
+	display: inline-block;
+	padding: 10px 20px;
 	margin-top: 10px;
+	color: #fff;
+	background-color: #d40000;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 14px;
+	text-align: center;
+	transition: background-color 0.3s ease;
 }
 
-/* Añadir animación */
+.button:hover {
+	background-color: #9e0000;
+}
+
+/* Añadir animación de aparición */
 .concierto-item {
 	opacity: 0;
 	transform: translateY(20px);
@@ -90,4 +109,3 @@ h1 {
 		transform: translateY(0);
 	}
 }
-

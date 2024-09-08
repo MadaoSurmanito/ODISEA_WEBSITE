@@ -49,8 +49,39 @@
 	margin-bottom: 10px;
 }
 
+/* Estilos para la sección de Cómo pedir */
 #como-pedir {
-	padding: 20px;
+	margin: 5%;
 	background-color: #333;
-	margin-top: 20px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+	border-radius: 30px;
+	height: auto; 
+}
+
+#como-pedir h2 {
+	font-size: 2em;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#como-pedir p {
+	margin: 1% 5%;
+	font-size: 1em;
+	text-align: justify;
+}
+
+#como-pedir ul {
+	margin: 0 5%;
+	font-size: 1em;
+	text-align: justify;
+}
+
+#como-pedir a {
+	color: #cfcfcf;
+	text-decoration: underline;
+}
+
+#como-pedir p:last-child {
+	margin-top: 0;
+	margin-bottom: 5%;
 }
